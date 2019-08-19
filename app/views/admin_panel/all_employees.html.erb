@@ -6,7 +6,7 @@
               <%= render('statistics') %>
                 <div class="card">
                     <div class="card-body">
-                  <h3 class="mb-3">All Employers</h3>
+                  <h3 class="mb-3">All Employees</h3>
                   <table class="table table-bordered">
                     <tbody>
                     <tr>
@@ -15,12 +15,12 @@
                        <th>Phone Number</th>
                        <th>Location</th>
                     </tr>
-                    <% @employers.each do |employer| %>
+                    <% @employees.each do |employee| %>
                     <tr>
-                      <td><%= employer.name %></td>
-                      <td><%= employer.email %></td>
-                      <td><%= employer.phone_number %></td>
-                      <td><%= employer.location %></td>
+                      <td><%= employee.name %></td>
+                      <td><%= employee.email %></td>
+                      <td><%= employee.phone_number %></td>
+                      <td><%= employee.location %></td>
                     </tr>
                     <% end %>
                   </tbody>

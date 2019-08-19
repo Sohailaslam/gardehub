@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>YourAppName</title>
+    <title>Gardehub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="icon" href="/fevicon.jpg" type="image/jpg" sizes="16x16">
     <%= csrf_meta_tags %>
@@ -29,7 +29,7 @@
           });
         </script>
     <% end %>
-    
+
     <% if alert.present? %>
       <script>
         swal({
@@ -48,7 +48,7 @@
         });
       </script>
     <% end %>
-  
+
     <% if flash[:info].present? %>
       <script>
         swal({
@@ -59,15 +59,15 @@
       </script>
     <% end %>
       <%# unless params[:controller]=='home' && params[:action]=='admin' %>
-      
-      <%# end %>  
+
+      <%# end %>
       <div class="container-main">
         <%= yield %>
       </div>
     <%# unless params[:controller]=='home' && params[:action]=='admin' %>
-      
+
     <%# end %>
       <%= render 'layouts/footer' %>
-    
+
   </body>
 </html>
