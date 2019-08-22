@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
+  before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -11,7 +11,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   # def create
-  #   super
+  #   puts 'Hello'
+  #   super do |user|
+  #     user.skip_password_validation = true
+  #     user.save
+  #   end
   # end
 
   # GET /resource/edit
@@ -42,7 +46,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:admin,:phone_number,:gender,:profile_pic, :location, :type])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:admin,:phone_number,:gender,:profile_pic, :location, :user_type])
   end
 
   # If you have extra params to permit, append them to the sanitizer.

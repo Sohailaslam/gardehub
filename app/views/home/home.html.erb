@@ -1,55 +1,60 @@
-<div class="container">
-    <h2>Hire with confidence,<br>not with your guts.</h2>
-  <br><br>
-  <p>Get accessed to thousands of qualified Security Guards<br>who meets your client's requirements</p>
-  <br><br>
-  <p>View their introduction's video and qualifications<br>before you invite them for an interview</p>
-  <br><br>
-  <p>And many more ...</p>
-</div>
-
-<div class="container">
-  <div class="container-fluid container-top py-4">
-    <div class="container container-signup container-sign p-4">
-      <div class="modal-login-body">
-        <div class="row align-items-center">
-          <div class="col-md-6 b-left">
-            <%= form_for(@user) do |f| %>
-            <%#= devise_error_messages! %>
-              <div class="form-group">
-                <p>I am an: </p>
-                <% User.user_types.keys.each do |user_type| %>
-                  <%= f.radio_button :user_type, user_type %>
-                  <%= f.label user_type.to_sym %>
-                <% end %>
+<div class="jumbotron">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="data pl-md-5">
+              <div class="content ">
+              <h2>Hire With Confidence, <br>not with your guts.</h2>
+              <p class = "white-text">Get access to thousands of qualified Security Guards <br> who meet your clients requirement</p>
+              <p class = "white-text">View their introduction video and qualifications <br>before you invite them for an interview.</p>
+              <br><br><p class = "white-text">And many many more ... </p>
               </div>
-              <div class="form-group">
-                <%= f.label :name %>
-                <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Name', class: 'form-control login-form' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label :email %>
-                <%= f.email_field :email,required: true, placeholder: 'Email', class: 'form-control login-form', required: true %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label :phone_number %>
-                <%= f.text_field :phone_number, required: true, placeholder: 'Phone number', class: 'form-control login-form' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label :location %>
-                <%= f.text_field :location, required: true, placeholder: 'City, State', class: 'form-control login-form' %>
-              </div>
-
-              <div class="actions">
-                <%= f.submit "Get Started for free!", class: 'btn btn-primary btn-block' %>
-              </div>
-          <% end %>
-        </div>
         </div>
       </div>
-    </div>
-  </div>
+      
+          <div class="col-md-6 col-12">
+            <div class="form">
+              <%= form_for(@user) do |f| %>
+                  <%#= devise_error_messages! %>
+                <div class="form-group">
+                  <label>I am an: </label>
+                  <div class="row">
+                     <% User.user_types.keys.each do |user_type| %>
+                        <div class="form-check form-check-inline col-md-3 col-12">
+                          <%= f.radio_button :user_type, user_type, {class: 'form-check-input'} %>
+                          <%= f.label user_type.to_sym, {class:'form-check-label'} %>
+                        </div>
+                     <% end %>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <%= f.label :name %>
+                  <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Name', class: 'form-control col-12' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :email %>
+                  <%= f.email_field :email,required: true, placeholder: 'Email', class: 'form-control col-12', required: true %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :phone_number %>
+                  <%= f.text_field :phone_number, required: true, placeholder: 'Phone number', class: 'form-control col-12' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :location %>
+                  <%= f.text_field :location, required: true, placeholder: 'City, State', class: 'form-control col-12' %>
+                </div>
+
+                <div class="row">
+                  <div class = "col-12 text-center">
+                      <%= f.submit "Get Started for free!", class: 'btn btn-primary btn-md text-centre' %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          </div>
+   </div>
 </div>
