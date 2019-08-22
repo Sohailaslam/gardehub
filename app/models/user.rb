@@ -1,9 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  attr_accessor :skip_password_validation
 
-  # devise :database_authenticatable, :registerable,
-  #        :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable,
+         :recoverable, :rememberable, :trackable, :validatable
 
   validates_uniqueness_of :email
 
@@ -14,6 +15,13 @@ class User < ApplicationRecord
 
   def make_admin
     self.update!(admin: true)
+  end
+
+  protected
+
+  def password_required?
+    return false if skip_password_validation
+    super
   end
 
 end

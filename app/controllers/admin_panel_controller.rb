@@ -1,6 +1,7 @@
 class AdminPanelController < ApplicationController
+  before_action :authenticate_user!
   before_action :group_users, :only => [:index, :all_employers, :all_employees, :all_instructors]
-  # load_and_authorize_resource class: false
+  load_and_authorize_resource class: false
 
   def index
 

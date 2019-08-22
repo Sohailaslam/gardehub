@@ -3,8 +3,9 @@ class UsersController < ApplicationController
 
     def create
       @user = User.new(user_params)
+      @user.skip_password_validation = true
       if @user.save
-        flash[:notice] = "We will approach you soon."
+        flash[:notice] = "Thanks for signing up, we will be in touch soon."
         redirect_to(root_path)
       else
         flash[:alert] = "Something went wrong!."

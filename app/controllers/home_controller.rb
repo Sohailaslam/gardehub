@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :set_new_user, :only => [:home, :security_guard, :instructor]
+  before_action :set_new_user, :only => [:home, :security_guard, :instructor, :random]
 
     def home
     end
@@ -14,7 +14,6 @@ class HomeController < ApplicationController
         # render :layout => false
         # byebug
     end
-
     private
 
     def set_new_user

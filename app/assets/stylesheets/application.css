@@ -128,3 +128,70 @@ img#blah:hover {
 .profile-descriptin {
   border-bottom: 1px solid #dadfe2;
 }
+
+/* written by khizer */
+.jumbotron{
+    
+  background-color: #307ce4;
+}
+.nav-link:hover{
+  background-color: #499df3;
+  
+}
+.log-out{
+  margin-top: 1px;
+  margin-left: 14px;
+}
+.form-check{
+  padding-left: 15px;
+}
+.white-text{
+  color: white;
+}
+/* p {
+  color: white;
+
+} */
+h2{
+  color: white;
+}
+.logo{
+  font-size: 22px;
+}
+
+.btn{
+  
+  
+  color:white;
+  background-color: #307ce4;
+}
+i{
+  font-size: 20px;
+}
+.data{
+
+  color: white;
+}
+.custom{
+  color: white;
+}
+a.nav-link{
+  color: white !important; 
+}
+form{
+  padding-left: 25px;
+  padding-top: 20px;
+  background-color:white;
+  padding-bottom: 20px;
+  padding-right: 25px;
+}
+label{
+  font-weight: 600;
+}
+.content h2 p{
+  color: #dadfe2;
+}
+.form-check-input{
+  margin-right: 12px;
+}
+/* end by khizer */
