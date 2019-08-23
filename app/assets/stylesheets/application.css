@@ -134,9 +134,12 @@ img#blah:hover {
     
   background-color: #307ce4;
 }
-.nav-link:hover{
+/* .nav-link:hover{
   background-color: #499df3;
   
+} */
+.page{
+  background-color: #499df3;
 }
 .log-out{
   margin-top: 1px;
@@ -152,6 +155,9 @@ img#blah:hover {
   color: white;
 
 } */
+.icons-main{
+  font-size: 16px;
+}
 h2{
   color: white;
 }
