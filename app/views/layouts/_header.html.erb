@@ -1,6 +1,6 @@
-<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark" style = "background-color: #307ce4;">
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark" style = "background-color: #0700FF;">
   <div class="container">
-  <a class="navbar-brand" href="<%= root_path %>"><img src ="/icon.jpeg" class="img-fluid" width = "200"></a>
+  <a class="navbar-brand" href="<%= root_path %>"><img src ="/ghwhite.svg" class="img-fluid" width = "60"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,13 +11,13 @@
               </li> --> 
 
         
-           <li class="nav-item px-3">
+           <li class="nav-item px-md-3">
              <a class="nav-link <%= request.path == root_path ? "active page" : "" %>" href="<%= root_path %>"><i class=""></i>Employees</a>
            </li>
-           <li class="nav-item px-3">
+           <li class="nav-item px-md-3">
               <a class="nav-link <%= request.path == register_security_guard_home_index_path ? "active page" : "" %>" style ="color:white;" href="<%= register_security_guard_home_index_path %>"><i class=""></i>Security Guards</a>
           </li>
-           <li class="nav-item px-3" >
+           <li class="nav-item px-md-3" >
               <a class="nav-link <%= request.path == register_instructor_home_index_path ? "active page" : "" %>" href="<%= register_instructor_home_index_path %>"><i class=""></i>Instructors</a>
           </li>
         <% if user_signed_in? and current_user.admin %>
