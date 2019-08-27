@@ -132,14 +132,23 @@ img#blah:hover {
 /* written by khizer */
 .jumbotron{
     
-  background-color: #307ce4;
+  /* background-color: #307ce4; */
+  background-color: #0700FF;
+}
+.submit{
+  background-color: #0700FF;
+
 }
 /* .nav-link:hover{
   background-color: #499df3;
   
 } */
 .page{
-  background-color: #499df3;
+  background-color: #728eeb;
+ 
+  
+  display: inline-block;
+  /* background-color: #0700FF; */
 }
 .log-out{
   margin-top: 1px;
@@ -157,6 +166,7 @@ img#blah:hover {
 } */
 .icons-main{
   font-size: 16px;
+  color: white;
 }
 h2{
   color: white;
@@ -165,11 +175,15 @@ h2{
   font-size: 22px;
 }
 
+.new-user{
+  background-color: #0700FF;
+}
 .btn{
   
   
   color:white;
-  background-color: #307ce4;
+ 
+  /* background-color: #307ce4; */
 }
 i{
   font-size: 20px;
