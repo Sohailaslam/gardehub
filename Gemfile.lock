@@ -150,7 +150,7 @@ GEM
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
     pg (1.1.4)
-    puma (3.12.1)
+    puma (3.12.3)
     rack (2.0.6)
     rack-contrib (2.1.0)
       rack (~> 2.0)
@@ -257,7 +257,7 @@ DEPENDENCIES
   omniauth-twitter
   paperclip
   pg (>= 0.18, < 2.0)
-  puma (~> 3.7)
+  puma (~> 3.12)
   rails (~> 5.2, >= 5.2.3)
   sass-rails (~> 5.0)
   spring
